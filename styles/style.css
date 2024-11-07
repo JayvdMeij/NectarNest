@@ -1,0 +1,282 @@
+@import url('https://fonts.googleapis.com/css2?family=Kreon:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kreon:wght@300..700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+:root {
+    --primary-color: #FFB71A;
+    --secondary-color: #FDE74C;
+    --head-color: #4C2E05;
+    --text-color: #000;
+    --kreon-font: "Kreon", serif;
+    --ubuntu-font: "Ubuntu", serif;
+}
+
+body {
+    width: 375px;
+    background-color: #FFF0E3;
+    margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: var(--kreon-font);
+    font-style: normal;
+    color: var(--head-color);
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+h1 {
+    font-size: 32px;
+    font-weight: 500;
+}
+
+h2 {
+    font-size: 28px;
+    font-weight: 700;
+}
+
+p {
+    font-size: 20px;
+    font-family: var(--ubuntu-font);
+    font-weight: 400;
+    margin-top: 0.1em;
+}
+
+.pollen1 {
+    position: absolute;
+    z-index: 9;
+    top: 50%;
+    left: 88%;
+    width: 30px;
+    height: 30px;
+    overflow: hidden;
+}
+
+.pollen2 {
+    position: absolute;
+    z-index: 9;
+    top: 60%;
+    left: 6%;
+    width: 30px;
+    height: 30px;
+    overflow: hidden;
+}
+
+header nav {
+    display: flex;
+    flex-direction: row;
+    padding: 0.75em 2em 0.75em 2em;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header nav a:nth-child(1) img {
+    width: 20%;
+}
+
+header nav a:nth-child(2) img {
+    width: 100%;
+}
+
+header section {
+    height: 12.5em;
+    padding-left: 2em;
+    padding-right: 2em;
+    display: flex;
+    align-items: center;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.header-home {
+    background-image: url("../images/home-header.png");
+}
+
+.header-project {
+    background-image: url("../images/over-header.png");
+}
+
+.header-uitwerkingen {
+    background-image: url("../images/uitwerkingen-header.png");
+}
+
+header section h1 {
+    color: #fff;
+    font-size: 32px;
+}
+
+ul li a {
+    font-family: var(--ubuntu-font);
+    font-size: 20px;
+}
+
+main {
+    padding-left: 2em;
+    padding-right: 2em;
+}
+
+main div {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    align-items: center;
+}
+
+main section {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    text-align: start;
+    margin-top: 4em;
+}
+
+.main_over_het_project section {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    text-align: start;
+    margin-top: 2em;
+}
+
+.main_over_het_project section:nth-child(2) {
+    margin-bottom: 6em;
+}
+
+.introTekst {
+    text-align: center;
+    margin-top: 1em;
+}
+
+main div a,
+section a {
+    font-family: var(--ubuntu-font);
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--head-color);
+    background-color: var(--secondary-color);
+    padding: 0.5em 2em 0.5em 2em;
+    text-decoration: none;
+    border: var(--head-color) solid 1px;
+    border-radius: 30px;
+    text-align: center;
+}
+
+main img {
+    margin-top: 3em;
+    width: 100%;
+}
+
+main section h2 {
+    text-align: start;
+}
+
+footer {
+    margin-top: 4em;
+    margin-bottom: 2em;
+    padding-left: 2em;
+    padding-right: 2em;
+    display: flex;
+}
+
+footer nav {
+    width: 70%;
+}
+
+footer div {
+    width: 30%;
+    display: flex;
+    align-items: center;
+}
+
+footer nav img {
+    width: 40%;
+}
+
+footer nav ul {
+    margin-top: 2em;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8em;
+    padding-left: 0;
+}
+
+footer div img {
+    width: 100%;
+    transform: rotate(-35deg);
+}
+
+.main_over_het_project div {
+    align-items: start;
+}
+
+.main_over_het_project img {
+    margin-top: 0;
+    border-radius: 5px;
+    width: 90%;
+}
+
+main>img {
+    width: 100%;
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
+ul {
+    margin-top: 0;
+}
+
+/* bron: https://dev.to/ljcdev/hamburger-css-no-js-2dfa */
+.close {
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    top: 4%;
+    right: 8%;
+}
+
+.close img {
+    width: 100%;
+    height: 100%;
+}
+
+.navbar {
+    position: absolute;
+    z-index: 99;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    /* basic menu styling*/
+    list-style: none;
+    background: #FFF0E3;
+    ;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    /* animate slide up/down */
+    transform: translateY(-100%);
+    transition: transform 0.4s ease;
+    padding-left: 0;
+    gap: 3em;
+    justify-content: center;
+}
+
+.navbar:target {
+    /* show navbar */
+    transform: translateY(0);
+}
+
+li a {
+    display: block;
+    font-family: var(--kreon-font);
+    color: var(--head-color);
+    /* remove default underline and add our own with padding and border bottom */
+    text-decoration: none;
+}
